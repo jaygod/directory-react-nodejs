@@ -56,7 +56,7 @@ var HomePage = React.createClass({
     render: function () {
         return (
             <div className={"page " + this.props.position}>
-                <Header text="Employee Directory" back="false"/>
+                <Header text="Lista Pracowników" back="false"/>
                 <SearchBar searchKey={this.props.searchKey} searchHandler={this.props.searchHandler}/>
                 <div className="content">
                     <EmployeeList employees={this.props.employees}/>
@@ -78,7 +78,7 @@ var EmployeePage = React.createClass({
     render: function () {
         return (
             <div className={"page " + this.props.position}>
-                <Header text="Employee" back="true"/>
+                <Header text="Pracownik" back="true"/>
                 <div className="card">
                     <ul className="table-view">
                         <li className="table-view-cell media">
