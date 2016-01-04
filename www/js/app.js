@@ -134,7 +134,7 @@ var App = React.createClass({
     getInitialState: function() {
         return {
             searchKey: '',
-            employees: employeeService.findByName("")
+            employees: []
         }
     },
     searchHandler: function(searchKey) {
