@@ -18,12 +18,6 @@ exports.findAll = function (req, res, next) {
             return (employee.firstName + ' ' + employee.lastName).toLowerCase().indexOf(name.toLowerCase()) > -1;
         }));
     }
-    if (name === "") {
-        res.send(employees.filter(function(employee) {
-            return (employee.firstName + ' ' + employee.lastName).toLowerCase().indexOf("") > -1;
-        }));
-    } 
-    
     else {
         res.send(employees);
     }
