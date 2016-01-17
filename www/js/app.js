@@ -134,7 +134,7 @@ var App = React.createClass({
     getInitialState: function() {
         return {
             searchKey: '',
-            employees: this.searchHandler("")
+            employees: []
         }
     },
     searchHandler: function(searchKey) {
@@ -146,6 +146,7 @@ var App = React.createClass({
         }.bind(this));
     },
     componentDidMount: function() {
+        this.searchHandler("");
         router.addRoute('', function() {
             this.slidePage(<HomePage key="list" searchHandler={this.searchHandler} searchKey={this.state.searchKey} employees={this.state.employees}/>);
         }.bind(this));
